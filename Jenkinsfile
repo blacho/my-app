@@ -11,4 +11,5 @@ node{
 Welcome to Jenkis email alerts!
 Thanks
 Irek''', cc: '', from: '', replyTo: '', subject: 'Jenkins Job', to: 'irek_b@wp.pl'
+  }
 }
