@@ -15,14 +15,12 @@ node{
           sh "${mvnHome}/bin/mvn sonar:sonar"
         }
     }
-   
-   stage('Slack Notification'){
-       slackSend baseUrl: 'https://hooks.slack.com/services/',
-       channel: '#jenkins-pipeline-demo',
-       color: 'good', 
-       message: 'Welcome to Jenkins, Slack!', 
-       teamDomain: 'Atos',
-       tokenCredentialId: 'slack-demo'
-   }
-
+   stage('Slack notification'){
+    slackSend baseUrl: 'https://hooks.slack.com/services/', 
+    channel: 'jenkins-pipeline', 
+    color: 'good', 
+    message: 'Welcome to Jenkins, Slack', 
+    teamDomain: 'Atos', 
+    tokenCredentialId: 'slack-demo'
+  }
 }
